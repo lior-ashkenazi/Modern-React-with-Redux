@@ -1,0 +1,54 @@
+
+<!-- saved from url=(0079)https://real-react-editor-server.herokuapp.com/5c76e547fca27a8bf33912268686aad4 -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <script src="./common.js.download"></script>
+        <link rel="stylesheet" href="./bootstrap.css">
+        <style>
+          body {
+            margin: 5px;
+          }
+        </style>
+      </head>
+      <body>
+        <div style="color: red;" id="err"></div>
+        <div id="root"><div><h3>My Blog Post</h3><p>Here is some content for my blog.</p></div></div>
+        <script>
+          try {
+            (function(){function r(e,n,t){function o(i,f){if(!n[i]){if(!e[i]){var c="function"==typeof require&&require;if(!f&&c)return c(i,!0);if(u)return u(i,!0);var a=new Error("Cannot find module '"+i+"'");throw a.code="MODULE_NOT_FOUND",a}var p=n[i]={exports:{}};e[i][0].call(p.exports,function(r){var n=e[i][1][r];return o(n||r)},p,p.exports,r,e,n,t)}return n[i].exports}for(var u="function"==typeof require&&require,i=0;i<t.length;i++)o(t[i]);return o}return r})()({1:[function(require,module,exports){
+"use strict";
+
+var _react = _interopRequireDefault(require("react"));
+
+var _reactDom = _interopRequireDefault(require("react-dom"));
+
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
+
+var App = function App() {
+  return /*#__PURE__*/_react["default"].createElement("div", null, /*#__PURE__*/_react["default"].createElement("h3", null, "My Blog Post"), /*#__PURE__*/_react["default"].createElement("p", null, "Here is some content for my blog."));
+};
+
+(function () {
+  var root = document.querySelector('#root');
+
+  if (!root.innerHTML && typeof App !== 'undefined') {
+    _reactDom["default"].render( /*#__PURE__*/_react["default"].createElement(App), root);
+  } else if (!root.innerHTML && typeof App === 'undefined') {
+    root.innerHTML = 'Found nothing to render. Either call ReactDOM.render yourself or make sure your component is called "App"';
+  }
+})();
+},{"react":"react","react-dom":"react-dom"}]},{},[1]);
+
+          } catch (err) {
+            document.querySelector('#err').innerHTML = err.message;
+          }
+        </script>
+      
+    
+  <div id="adidiMorfixChromeExtensionBalloon" class="adidi-mceb-topRight"><div class="adidi-mceb-img-box"><img src="chrome-extension://edapkleoiajaekmconcehhkcbehppgom/icons/icon.png"></div>
+     <div class="adidi-mceb-x-box"><img src="chrome-extension://edapkleoiajaekmconcehhkcbehppgom/icons/x.png"></div>
+     <div class="adidi-mceb-title-box"><div class="adidi-mceb-t"></div></div>
+     <div class="adidi-mceb-content"></div>
+     <div class="adidi-mceb-footer">
+          <img src="chrome-extension://edapkleoiajaekmconcehhkcbehppgom/icons/settings.png">
+          <a href="chrome-extension://edapkleoiajaekmconcehhkcbehppgom/settings.html" target="_blank">Settings</a>
+    </div></div></body></html>
