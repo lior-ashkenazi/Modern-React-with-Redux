@@ -8,7 +8,7 @@ function App() {
 
     useEffect(() => {
         fetchBooks();
-    }, []);
+    }, [fetchBooks]);
 
     // DON'T DO THIS:
     // (INFINITE LOOP OF RE-RENDERING THE APP COMPONENT)
