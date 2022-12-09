@@ -18,6 +18,7 @@ function TablePage() {
             render: (fruit) => <div className={`p-3 m-2 ${fruit.color}`}></div>
         },
         {
+            header: () => <th className="bg-red-500">Score</th>,
             label: 'Score',
             render: (fruit) => fruit.score
         },
