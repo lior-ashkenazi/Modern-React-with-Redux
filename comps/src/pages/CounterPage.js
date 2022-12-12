@@ -1,6 +1,6 @@
 import produce from 'immer';
 // NOT all projects going to use immer
-// remember how to use useReducer without it
+// remember how to use useReducer without itf
 import {useReducer} from 'react';
 import Button from '../components/Button';
 import Panel from '../components/Panel';
