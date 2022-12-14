@@ -4,16 +4,16 @@ const carsSlice = createSlice({
     name: 'cars',
     initialState: {
         searchTerm: '',
-        cars: []
+        data: []
     },
     reducers: {
         changeSearchTerm(state, action) {
-            state.search = action.payload;
+            state.searchTerm = action.payload;
         },
         addCar(state, action) {
             // Assumption:
             // action.payload === {name: 'ab', cost: 140}
-            state.cars.push({
+            state.data.push({
                 name: action.payload.name,
                 cost: action.payload.cost,
                 id: nanoid(),
@@ -22,7 +22,7 @@ const carsSlice = createSlice({
         removeCar(state, action) {
             // Assumption
             // action.payload === the id of the car we want to remove
-            state.cars = state.cars.filter(
+            state.data = state.data.filter(
                 (car) => car.id !== action.payload);
         }
     }
