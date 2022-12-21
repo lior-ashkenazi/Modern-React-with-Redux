@@ -34,6 +34,11 @@
       "id": 10,
       "title": "Hiking Trip",
       "userId": 1
+    },
+    {
+      "userId": 1,
+      "title": "Practical Cotton Shoes",
+      "id": 11
     }
   ],
   "photos": []

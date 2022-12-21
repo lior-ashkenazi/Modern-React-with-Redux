@@ -8,7 +8,7 @@ export const store = configureStore({
         users: usersReducer,
         // we use [] not for array but for
         // a purpose of searching for the name
-        // of the reducer path the albums' api
+        // of the reducer path in the albums' api
         // and unwrap it with square brackets,
         // apparently fancy syntax, don't be startled
         [albumsApi.reducerPath]: albumsApi.reducer,
@@ -23,4 +23,8 @@ setupListeners(store.dispatch);
 export * from './thunks/fetchUsers';
 export * from './thunks/addUser';
 export * from './thunks/removeUser';
-export {useFetchAlbumsQuery} from './apis/albumsApi';
+export {
+    useFetchAlbumsQuery,
+    useAddAlbumMutation,
+    useRemoveAlbumMutation
+} from './apis/albumsApi';
