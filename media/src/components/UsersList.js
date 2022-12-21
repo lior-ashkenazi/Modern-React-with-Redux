@@ -4,6 +4,7 @@ import {fetchUsers, addUser} from '../store';
 import Button from './Button';
 import Skeleton from './Skeleton';
 import {useThunk} from '../hooks/use-thunk';
+import UsersListsItem from './UsersListItem';
 
 
 export default function UsersList() {
@@ -24,22 +25,13 @@ export default function UsersList() {
     };
 
     let content;
-    console.log(isLoadingUsers);
     if (isLoadingUsers) {
-        console.log("lior");
         content = <Skeleton times={6} className="h-10 w-full"/>;
     } else if (loadingUsersError) {
         content = <div>Error fetching data...</div>;
     } else {
-        content = data.map((user) => {
-            return (
-                <div key={user.id} className="mb-2 border rounded">
-                    <div className="flex p-2 justify-between items-center cursor-pointer">
-                        {user.name}
-                    </div>
-                </div>
-            );
-        });
+        content =
+            data.map((user) => <UsersListsItem key={user.id} user={user}/>);
     }
 
     return (

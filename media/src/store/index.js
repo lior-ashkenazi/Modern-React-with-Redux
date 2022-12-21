@@ -1,11 +1,26 @@
 import {configureStore} from '@reduxjs/toolkit';
+import {setupListeners} from '@reduxjs/toolkit/query';
 import {usersReducer} from './slices/usersSlice';
+import {albumsApi} from './apis/albumsApi';
 
 export const store = configureStore({
     reducer: {
-        users: usersReducer
+        users: usersReducer,
+        // we use [] not for array but for
+        // a purpose of searching for the name
+        // of the reducer path the albums' api
+        // and unwrap it with square brackets,
+        // apparently fancy syntax, don't be startled
+        [albumsApi.reducerPath]: albumsApi.reducer,
+    },
+    middleware: (getDefaultMiddleware) => {
+        return getDefaultMiddleware().concat(albumsApi.middleware);
     }
 });
 
+setupListeners(store.dispatch);
+
 export * from './thunks/fetchUsers';
 export * from './thunks/addUser';
+export * from './thunks/removeUser';
+export {useFetchAlbumsQuery} from './apis/albumsApi';

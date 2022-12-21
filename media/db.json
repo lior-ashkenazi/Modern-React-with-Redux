@@ -19,8 +19,22 @@
     {
       "name": "Katrina Gleason",
       "id": 5
+    },
+    {
+      "name": "Lee Pfannerstill",
+      "id": 6
+    },
+    {
+      "name": "Rose Lubowitz",
+      "id": 7
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "id": 10,
+      "title": "Hiking Trip",
+      "userId": 1
+    }
+  ],
   "photos": []
 }
