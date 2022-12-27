@@ -17,10 +17,6 @@
       "id": 4
     },
     {
-      "name": "Katrina Gleason",
-      "id": 5
-    },
-    {
       "name": "Lee Pfannerstill",
       "id": 6
     },
@@ -41,5 +37,21 @@
       "id": 11
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=15410",
+      "id": 1
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=5751",
+      "id": 2
+    },
+    {
+      "albumId": 10,
+      "url": "https://loremflickr.com/150/150/abstract?lock=50243",
+      "id": 3
+    }
+  ]
 }
